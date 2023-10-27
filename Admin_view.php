@@ -17,8 +17,11 @@
                 <div class="flex gap-10 ">
                     <a class="transition-all delay-200 opacity-40 hover:opacity-60" href="./">Home</a>
                     <a class="transition-all delay-200 opacity-40 hover:opacity-60" href="./shop.php">Shop</a>
-                    <a class="transition-all delay-200 opacity-90 hover:opacity-90" href="./Admin.html">Admin</a>
+                    <a class="transition-all delay-200 opacity-90 hover:opacity-90" href="">Admin</a>
                 </div>
+                <button onclick="Logout()" class="transition-all delay-200 opacity-90 hover:opacity-90">
+                        <i class="fa-solid fa-power-off"></i>
+                    </button>
             </div>
         </div>
         <div class="absolute z-0 w-screen h-screen ">
@@ -28,19 +31,20 @@
                         <div class="">
                             <div class="mb-4 ">
                                 <label class="block mb-1 font-bold " for="Naam">Naam</label>
-                                <input class="block w-full p-2 mb-1 rounded-md outline-none appearance-none ring-2 ring-gray-300" type="text" name="Naam"/>
+                                <input class="block w-full p-2 mb-1 rounded-md outline-none appearance-none ring-2 ring-gray-300" type="text" id="Naam" name="Naam"/>
                             </div>
                             <div class="mb-4 ">
                                 <label class="block mb-1 font-bold " for="Prijs">Prijs</label>
-                                <input class="block w-full p-2 mb-1 rounded-md outline-none appearance-none ring-2 ring-gray-300" type="text" name="Prijs"/>
+                                <input class="block w-full p-2 mb-1 rounded-md outline-none appearance-none ring-2 ring-gray-300" type="text" id="Prijs" name="Prijs"/>
                             </div>
                             <div class="mb-4 ">
                                 <label class="block mb-1 font-bold " for="Vooraad">Vooraad</label>
-                                <input class="block w-full p-2 mb-1 rounded-md outline-none appearance-none ring-2 ring-gray-300" type="text" name="Vooraad"/>
+                                <input class="block w-full p-2 mb-1 rounded-md outline-none appearance-none ring-2 ring-gray-300" type="text" id="Vooraad" name="Vooraad"/>
                             </div>
                             <div class="mb-4 ">
                                 <label class="block mb-1 font-bold " for="Beschrijving">Beschrijving</label>
-                                <textarea class="block w-full p-2 mb-1 rounded-md outline-none appearance-none resize-none h-44 ring-2 ring-gray-300" type="text" name="Beschrijving"></textarea>
+                                <textarea class="block w-full p-2 mb-1 rounded-md outline-none appearance-none resize-none h-44 ring-2 ring-gray-300" type="text" id="Beschrijving" name="Beschrijving"></textarea>
+                                <input type="hidden" id="id"/>
                             </div>
                         </div>
                         <div>

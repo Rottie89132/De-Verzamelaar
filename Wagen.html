@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="./js/fetchwagen.js"></script>
+    <script src="https://kit.fontawesome.com/a4cee7c207.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="p-0 m-0 bg-red-500 ">
+    <div class="fixed w-screen h-screen overflow-hidden">
+        <div class="mx-8 ">
+            <div class="flex justify-between py-3 pr-8 mt-3 text-xl font-extrabold text-white">
+                <div class="flex gap-10 ">
+                    <a class="transition-all delay-200 opacity-40 hover:opacity-60" href="./">Home</a>
+                    <a class="transition-all delay-200 opacity-40 hover:opacity-60" href="./shop.php">Shop</a>
+                    <a class="transition-all delay-200 opacity-40 hover:opacity-60" href="./login.html">Inloggen</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute z-0 w-screen h-screen ">
+            <div class="gap-5 m-8 h-5/6">
+                <div id="Winkelwagen" class="p-6 overflow-scroll bg-white rounded-xl">
+                    <h1 class="mb-4 text-lg font-bold ">Winkelwagen</h1>
+                    <div class="">
+                        <table class="w-full grid-rows-1 bg-white">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="px-4 py-3 text-left">Naam</th>
+                                    <th class="px-4 py-3 text-left">Prijs</th>
+                                    <th class="px-4 py-3 text-center">Acties</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Winkel">
+                            </tbody>
+                            <tfoot class="">
+                                <tr class="0">
+                                    <th class="px-4 py-3 text-left">Totaal</th>
+                                    <th id="TotaalPrijs" class="px-4 py-3 text-left">€0</th>
+                                    <th class="px-4 py-3 text-left"></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <button onclick="Volgendestap()"
+                            class="px-6 py-2 mt-3 text-white bg-red-500 rounded-sm ">Volgende</button>
+                    </div>
+                </div>
+                <div id="Formulier" style="display: none;" class="p-6 overflow-scroll bg-white hi rounded-xl">
+                    <div class="flex gap-2 mb-4 align-middle">
+                        <button onclick="StapTerug()" class="font-bold opacity-40">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            Vorige
+                        </button>
+                    </div>
+                    <h1 class="mb-4 text-lg font-bold ">Adress Gegevens</h1>
+                    
+                    <form action="./server/bestelingen.php" method="POST" >
+                        <div class="mb-4">
+                            <label for="naam" class="block text-sm font-medium text-gray-700">Naam:</label>
+                            <input type="text" id="naam" name="naam" required class="w-full p-2 border rounded">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="telefoon" class="block text-sm font-medium text-gray-700">Telefoon:</label>
+                            <input type="tel" id="telefoon" name="telefoon" required class="w-full p-2 border rounded">
+                        </div>
+
+                        <div id="BestelIDs"></div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700">E-mailadres:</label>
+                            <input type="email" id="email" name="email" required class="w-full p-2 border rounded">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="adres" class="block text-sm font-medium text-gray-700">Adres:</label>
+                            <input type="text" id="adres" name="adres" rows="4" required class="w-full p-2 border rounded"></inpu>
+                        </div>
+
+                        <div class="mb-4">
+                            <input type="submit" value="Verzenden" class="p-2 text-white bg-red-500 rounded cursor-pointer hover:bg-red-700">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

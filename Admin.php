@@ -22,11 +22,11 @@ if ($Items->num_rows > 0) {
         $Imagelink = ucfirst($FetchItem['Imagelink']); 
         $toonItems .= "
         <div class=' font-bold bg-[#B54136] bg-opacity-80 p-4 rounded-xl'>
-            <img src='$Imagelink' class='p-2 mb-2 bg-white bg-opacity-10 rounded-xl'></img>
+            <img src='$Imagelink' class='w-full p-2 mb-2 bg-white h-52 bg-opacity-10 rounded-xl'></img>
             <div class='flex gap-2'>
-                <button class='px-4 text-black bg-white rounded-lg'><i class='fa-solid fa-pen-to-square'></i></button>
+                <button onclick='Updatefiles($ItemId)'class='px-4 text-black bg-white rounded-lg'><i class='fa-solid fa-pen-to-square'></i></button>
                 <button onclick='DeleteFiles($ItemId)' class='px-4 text-red-500 bg-white rounded-lg'><i class='fa-solid fa-trash-can'></i></button>
-                <p class='px-4 text-black bg-white rounded-lg'> $Vooraad Op vooraad</p>
+                <p class='px-4 text-sm text-black bg-white rounded-lg'> $Vooraad Op vooraad</p>
             </div>
         </div>";
     }

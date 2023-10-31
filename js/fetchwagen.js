@@ -3,6 +3,7 @@ const ToonWagen = () => {
     const ToonPrijs = document.querySelector("#TotaalPrijs");
     const IDs = document.querySelector("#BestelIDs");
     const Winkel = document.querySelector("#Winkel");
+    //const button = document.querySelector("#button");
     let tootaalprijs = 0;
 
     document.querySelector("#Winkel").innerHTML = ``
@@ -15,17 +16,23 @@ const ToonWagen = () => {
 
         tootaalprijs += Number(data[0].Prijs)
         ToonPrijs.innerHTML = `€${tootaalprijs}`
+
+        if (tootaalprijs > 0){
+            document.querySelector("#button").disabled = false;
+        }
         
         IDs.innerHTML += `
             <input type="hidden" name="ItemID[]" value="${data[0].ItemId}"/>
         `
 
         Winkel.innerHTML += `
-        <tr class="border-b border-gray-200 group hover:bg-gray-100">
+        <tr class="border-b border-gray-200 group hover:bg-gray-50">
             <td class="px-4 py-3 text-left">${data[0].Naam}</td>
             <td class="px-4 py-3 text-left">€${data[0].Prijs}</td>
             <td class="px-4 py-3 text-center group-hover:opacity-100 text-red-500 opacity-60 "><i onclick="verwijder(${data[0].ItemId})" class="fa-solid fa-trash"></i></td>
         </tr>`
+
+        
     });
 }
 
@@ -34,6 +41,7 @@ const verwijder = (ItemId) => {
     const bijgewerkteItems = ItemsData.filter(item => item.ProductID !== ItemId);
 
     if(bijgewerkteItems.length < 1) {
+        document.querySelector("#button").disabled = true;
         document.querySelector("#TotaalPrijs").innerHTML = "€0"
         document.querySelector("#BestelIDs").innerHTML = "";
     }

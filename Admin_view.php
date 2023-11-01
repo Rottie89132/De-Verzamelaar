@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/a4cee7c207.js" crossorigin="anonymous"></script>
     <script src="./js/actions.js"></script>
     <script type="module" src="./js/admin.js"></script>
-    <title>Document</title>
+    <title>Admin</title>
 </head>
 <body class="p-0 m-0 overflow-hidden bg-red-500 ">
     <div class="fixed w-screen h-screen bg-gradient-to-r from-red-500 to-red-800">

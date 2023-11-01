@@ -30,6 +30,6 @@ const Updatefiles = async (idToUpdate) => {
 const Logout = async () => {
     document.cookie = "TokenUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setTimeout(() => {
-        window.location.href = "./Login.html";
+        window.location.href = "./Login.php";
     }, 500)
 }

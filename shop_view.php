@@ -7,7 +7,7 @@
     <script src="./js/winkelwagen.js"></script>
     <script src="https://kit.fontawesome.com/a4cee7c207.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Shop</title>
 </head>
 <body class="p-0 m-0 bg-red-500 ">
     <div class="fixed w-screen h-screen overflow-scroll">
@@ -16,7 +16,7 @@
                 <div class="flex gap-10 ">
                     <a class="transition-all delay-200 opacity-40 hover:opacity-60" href="./">Home</a>
                     <a class="transition-all delay-200 opacity-90 hover:opacity-90" href="./shop.php">Shop</a>
-                    <a class="transition-all delay-200 opacity-40 hover:opacity-60" href="./login.html">Inloggen</a>
+                    <a class="transition-all delay-200 opacity-40 hover:opacity-60" href="./login.php">Inloggen</a>
                 </div>
                 <a href="./Wagen.html" class="transition-all delay-200 opacity-90 hover:opacity-90">
                     <i class="fa-solid fa-cart-shopping"></i>

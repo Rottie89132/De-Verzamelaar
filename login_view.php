@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="./js/login.js"></script>
-    <title>Document</title>
+    <script src="./js/login.js"></script>
+    <title>Login</title>
 </head>
 <body class="p-0 m-0 overflow-hidden bg-red-500 ">
     <div class="fixed w-screen h-screen bg-gradient-to-r from-red-500 to-red-800">

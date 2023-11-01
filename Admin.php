@@ -1,5 +1,6 @@
 <?php 
 
+
 require_once "config.inc.php";
 session_start();
 $msg = "";
@@ -33,8 +34,12 @@ if ($Items->num_rows > 0) {
 } else {
     $toonItems = '';
 } 
-include_once("Admin_view.php");
 
-
+if (isset($_COOKIE['TokenUser']) && $_COOKIE['TokenUser'] == "12345678") {
+    include_once("Admin_view.php");
+    header("Location: ./Admin.php");
+} else {
+    header("Location: ./Login.php");
+}
 
 ?>
